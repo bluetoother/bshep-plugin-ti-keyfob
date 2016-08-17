@@ -19,9 +19,9 @@ module.exports = {
             count = 0;
 
         if (basicInfo.devName === 'TI BLE Keyfob' ) {
-            for(var uuid in periph.servs) {
+            for(var hdl in periph.servs) {
                 for(var i = 0; i < checkServList.length; i += 1)
-                    if (uuid === checkServList[i]) count += 1;
+                    if (periph.servs[hdl].uuid === checkServList[i]) count += 1;
             }
 
             if (count === 6)
