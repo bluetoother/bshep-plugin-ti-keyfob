@@ -1,16 +1,51 @@
 module.exports = {
     gattDefs: {
         service: [
-            { name: 'accelero', uuid: '0xffa0' },
-            { name: 'simpleKey', uuid: '0xffe0' }
+            { 
+                name: 'accelero', 
+                uuid: '0xffa0' 
+            },
+            { 
+                name: 'simpleKey', 
+                uuid: '0xffe0' 
+            }
         ],
         characteristic: [
-            {name: 'acceleroEnable', uuid: '0xffa1', params: ['enable'], types: ['uint8']}, 
-            {name: 'acceleroRange', uuid: '0xffa2', params: ['range'], types: ['uint16']}, 
-            {name: 'acceleroX', uuid: '0xffa3', params: ['x'], types: ['uint8']}, 
-            {name: 'acceleroY', uuid: '0xffa4', params: ['y'], types: ['uint8']}, 
-            {name: 'acceleroZ', uuid: '0xffa5', params: ['z'], types: ['uint8']}, 
-            {name: 'keyPressState', uuid: '0xffe1', params: ['enable'], types: ['uint8']}
+            { 
+                name: 'acceleroEnable', 
+                uuid: '0xffa1', 
+                params: ['enable'], 
+                types: ['uint8']
+            }, 
+            { 
+                name: 'acceleroRange', 
+                uuid: '0xffa2', 
+                params: ['range'], 
+                types: ['uint16']
+            }, 
+            { 
+                name: 'acceleroX', 
+                uuid: '0xffa3', 
+                params: ['x'], 
+                types: ['uint8']
+            }, 
+            { 
+                name: 'acceleroY', 
+                uuid: '0xffa4', 
+                params: ['y'], 
+                types: ['uint8']
+            }, 
+            { 
+                name: 'acceleroZ', 
+                uuid: '0xffa5', 
+                params: ['z'], 
+                types: ['uint8']}, 
+            { 
+                name: 'keyPressState', 
+                uuid: '0xffe1', 
+                params: ['enable'], 
+                types: ['uint8']
+            }
         ]
     },
     examine: function (periph, basicInfo) {
